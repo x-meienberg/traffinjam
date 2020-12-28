@@ -1,5 +1,5 @@
-# Traffinjam (Traffic Financial Jam)
+# Traffinjam 
 Algotrading project for personal use and experiments
 
 
-This is just a test
+
