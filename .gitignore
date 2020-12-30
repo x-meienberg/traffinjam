@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 
-#Config file
+#Config file - from external source
 config.py
 __pycache__
 .ipynb_checkpoints
