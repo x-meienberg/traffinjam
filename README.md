@@ -8,7 +8,7 @@ Algotrading project for personal use and experiments
 
 - [Algotrader 101](https://algotrading101.com/learn/alpaca-trading-api-guide/) for the Alpaca Trading API
 - [Alpaca Forum](https://forum.alpaca.markets/t/manually-trading-stocks-using-postman-and-the-alpaca-api/166) for the Alpaca API using Postman
-- **PartTimeLarry**, a great youtuber explaining trading with Python via his [videos](https://www.youtube.com/c/parttimelarry) and 
+- [PartTimeLarry](https://twitter.com/PartTimeLarry), a great youtuber explaining trading with Python via his [videos](https://www.youtube.com/c/parttimelarry) and 
 
 
 
