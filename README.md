@@ -32,5 +32,14 @@ Algotrading project for personal use and experiments
 
 1. Equal weight S&P 500
 2. Quantitative momentum strategy
-3. Qunatitative value strategy
+3. Quantitative value strategy
 
+### Automated Trading Strategies from Medium
+
+1. [Alpaca Pt. 1](https://medium.com/automation-generation/ultimate-list-of-automated-trading-strategies-you-should-know-part-1-c9a333f58930)
+    1. Time-series momentum/mean reversion
+    2. Cross-sectional momentum/mean reversion
+    3. Dollar cost averaging
+    4. Market making
+    5. Day trading automation
+2. [Alpha Research](https://medium.com/swlh/how-to-build-quant-algorithmic-trading-model-in-python-12abab49abe3)
