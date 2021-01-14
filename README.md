@@ -43,3 +43,5 @@ Algotrading project for personal use and experiments
     4. Market making
     5. Day trading automation
 2. [Alpha Research](https://medium.com/swlh/how-to-build-quant-algorithmic-trading-model-in-python-12abab49abe3)
+3. [Python for Algorithmic Trading](https://pyalgo.tpq.io/pyalgo_excerpt.pdf)
+
