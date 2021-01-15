@@ -4,7 +4,11 @@
 import access_alpaca 
 import read_stocks
 
-# 
-api = access_alpaca.access_api()
+api2 = access_alpaca.api_2
+api1 = access_alpaca.api_1
 
-#access_alpaca.access_status()
+
+
+read_stocks.is_open(api2)
+
+read_stocks.read_market_data(api1)

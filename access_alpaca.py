@@ -13,28 +13,27 @@ CLIENT_Secret = config.client_secret
 BASE_URL = 'https://paper-api.alpaca.markets'
 
 #Instantiate REST API
-api = tradeapi.REST(CLIENT_ID, CLIENT_Secret, BASE_URL, api_version='v2')
+api_2 = tradeapi.REST(CLIENT_ID, CLIENT_Secret, BASE_URL, api_version='v2')
+api_1 = tradeapi.REST(CLIENT_ID, CLIENT_Secret, BASE_URL, api_version='v1')
 
-def access_api():
+
+def print_account():
 
 	#Obtain account information
-	account = api.get_account()
-
+	account = api_2.get_account()
 	print(account)
 
-	return api
 
-
-def access_status():
+def status():
 
 	#You can access status variables easily via the variable command
-	status = api.get_account().status 
+	status = api_2.get_account().status 
 	print(status)
 
 
 def open_positions():
 
-	positions = api.list_positions()
+	positions = api_2.list_positions()
 	print('Open Positions:')
 	print(positions)
 
