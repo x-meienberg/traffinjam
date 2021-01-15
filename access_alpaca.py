@@ -31,6 +31,6 @@ def access_alpaca():
 
 	print(status)
 
-access_alpaca()
+
 
 

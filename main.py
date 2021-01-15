@@ -1,7 +1,6 @@
 #main.py
 #This is the main execution file for the aplaca algorithmic trading program
 
-import access_alpaca as ap 
+import access_alpaca 
 
-
-ap.access_alpaca()
+access_alpaca.access_alpaca()
