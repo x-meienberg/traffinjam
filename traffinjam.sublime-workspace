@@ -1,0 +1,469 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"search",
+				"search_interval"
+			],
+			[
+				"range",
+				"range_of_search"
+			],
+			[
+				"rang",
+				"range_of_search"
+			],
+			[
+				"save",
+				"savetxt"
+			],
+			[
+				"to",
+				"to_numpy"
+			],
+			[
+				"label",
+				"LabelEncoder"
+			],
+			[
+				"proce",
+				"processed_fileName_mat\tstatement"
+			],
+			[
+				"raw",
+				"raw_fileName\tstatement"
+			],
+			[
+				"pro",
+				"processed_fileName\tparam"
+			],
+			[
+				"ra",
+				"raw_fileName\tstatement"
+			],
+			[
+				"raw_",
+				"raw_fileName\tparam"
+			],
+			[
+				"time",
+				"time_newFile\tstatement"
+			],
+			[
+				"name",
+				"name_2\tstatement"
+			],
+			[
+				"float",
+				"float"
+			],
+			[
+				"le",
+				"LEFT\tstatement"
+			],
+			[
+				"the_bu",
+				"the_button2\tstatement"
+			],
+			[
+				"max",
+				"max_no_conf"
+			],
+			[
+				"ylim",
+				"ylim_no_conf\tstatement"
+			],
+			[
+				"Excel",
+				"ExcelWriter\tinstance"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "trading_strategy_1.py",
+			"settings":
+			{
+				"buffer_size": 154,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"gitc",
+				"Git: Commit"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"Git com",
+				"Git: Commit"
+			],
+			[
+				"Git Pul",
+				"Git: Pull"
+			],
+			[
+				"git commit ",
+				"Git: Commit"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"a file icon",
+				"Preferences: A File Icon Settings"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Python",
+				"Python Breakpoints: Clear All"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: di",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Packageresour",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Package resou",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Packageresou",
+				"PackageResourceViewer: Extract All Packages"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 62.0,
+		"history":
+		[
+			"clear",
+			"for i in range(5):",
+			"import os",
+			"py",
+			"git",
+			"clear",
+			"12",
+			"python3",
+			"exit()",
+			"import numpy as np",
+			"exit()",
+			"class Parent:  ",
+			"class parent: ",
+			"class Parent:",
+			"test = 1",
+			"python3"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Xeno/Documents/Dokumente - Xenos MacBook Pro/Private/Projects/Algotrader Traffinjam/traffinjam"
+	],
+	"file_history":
+	[
+		"/Users/Xeno/Documents/Dokumente - Xenos MacBook Pro/Private/Projects/Algotrader Traffinjam/traffinjam/trading_strategy_1.py",
+		"/Users/Xeno/Library/Application Support/Sublime Merge/Packages/User/Preferences.sublime-settings",
+		"/Users/Xeno/Documents/Dokumente - Xenos MacBook Pro/Studies/ETH Zürich/Webpage/index.html"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "trading_strategy_1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 116.0
+	},
+	"pinned_build_system": "Packages/User/Python3.sublime-build",
+	"project": "traffinjam.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control Messages"
+			],
+			[
+				"tes",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/test.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 203.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
