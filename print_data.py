@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np 
 
 
-def show_time_plot(data,name_of_stock, days):
+def show_time_plot(data,name_of_stock, days,ma_interval):
 
 	t = []
 	high = []
@@ -35,32 +35,26 @@ def show_time_plot(data,name_of_stock, days):
 		mean_price.append((low[i]+high[i])/2) #Calculate mean
 
 	#Calculate the first simple moving average
-	sma.append(closing_price[0])	
+	sma = closing_price[0:ma_interval]
 
 	
 	#Calculate the simple moving average
-	for j in range(1,horizon):
-
-		sma.append(sma[j-1]+1/(j+1)*(closing_price[j]-sma[j-1]))
+	for j in range(ma_interval,horizon):
+		sma.append(sma[j-1]+1/20*(closing_price[j]-sma[j-1]))
 
 
 	# Calculate exponential moving average
 	
-	alpha = 2/(horizon+1) #Define alpha value
+	alpha = 2/(ma_interval+1) #Define alpha value
+	EMA = sma[0:ma_interval]
 
-	weightedCount = [0]
-	weigthedSum = [0]
-	EMA = [(high[0]+low[0])/2]
+	for j in range(ma_interval,horizon):
 
-	for j in range(1,horizon):
-
-		weightedCount.append((1-(1-alpha)**j)/(1-(1-alpha)))	
-		weigthedSum.append(closing_price[j-1]+(1-alpha)*weigthedSum[j-1])
-		EMA.append(weigthedSum[j]/weightedCount[j])	
+		EMA.append((closing_price[j]-EMA[j-1])*alpha+EMA[j-1])	
 			
 
 	#Find momentum changes within data (historical data)
-	for i in range(3, horizon):
+	for i in range(ma_interval, horizon):
 
 		if isMomentumUpDown == -1 or isMomentumUpDown == 0: 
 
@@ -101,6 +95,7 @@ def show_time_plot(data,name_of_stock, days):
 	ax.set_title('Historical Data of '+name_of_stock+' over last '+days+' days')
 	fig.autofmt_xdate()
 	fig.savefig('results/'+name_of_stock+'_stock.svg')
+
 
 
 

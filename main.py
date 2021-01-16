@@ -10,7 +10,8 @@ api2 = access_alpaca.api_2
 api1 = access_alpaca.api_1
 
 input_stocks = ['AAPL','GOOG','FB','TSLA','ABB','NVS','DOW']
-intervals = 90 #Day Intervals
+intervals = 90 #Day intervals
+ma_interval = 20 #Moving Average Intervals
 
 
 
@@ -21,7 +22,6 @@ intervals = 90 #Day Intervals
 for i in input_stocks:
 
 	stock_prices = read_stocks.read_market_data(api1, i, intervals)
-	print_data.show_time_plot(stock_prices, i, intervals)
-
+	print_data.show_time_plot(stock_prices, i, intervals,ma_interval)
 
 
