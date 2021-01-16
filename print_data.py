@@ -71,6 +71,6 @@ def show_time_plot(data,name_of_stock, days):
 	days = str(days)
 	ax.set_title('Historical Data of '+name_of_stock+' over last '+days+' days')
 	fig.autofmt_xdate()
-	fig.savefig(name_of_stock+'_stock.svg')
+	fig.savefig('results/'+name_of_stock+'_stock.svg')
 
 
