@@ -16,13 +16,13 @@ def is_open(api):
 
 
 ### Please check again here 
-def read_market_data(api,input_stocks,t):
+def read_market_data(api,input_stocks,intervals,ma_interval):
 
 
-		barset = api.get_barset(input_stocks,'day', limit = t)
+		barset = api.get_barset(input_stocks,'day', limit = intervals+ma_interval) #acquire additional data for moving average (add extra ma_interval)
 		stock_bars = barset[input_stocks]
 
-		week_open = stock_bars[t-5].o
+		week_open = stock_bars[intervals+ma_interval-5].o
 		week_close = stock_bars[-1].c
 
 

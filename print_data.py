@@ -76,15 +76,15 @@ def show_time_plot(data,name_of_stock, days,ma_interval):
 	#Define plots
 	fig, ax = plt.subplots()
 
-	ax.plot(t,closing_price)
-	ax.plot(t,sma)
-	ax.plot(t,EMA)
+	ax.plot(t[ma_interval:],closing_price[ma_interval:])
+	ax.plot(t[ma_interval:],sma[ma_interval:])
+	ax.plot(t[ma_interval:],EMA[ma_interval:])
 	ax.scatter(t_momentum_up,y_momentum_up, marker="^", color="green")
 	ax.scatter(t_momentum_down,y_momentum_down, marker="v", color="red")
 	
 
 
-	labels = ["Closing Stock Price","SMA","EMA", "Momentum Up", "Momentum Down"]
+	labels = ["Stock Price","SMA","EMA", "Momentum Up", "Momentum Down"]
 
 	ax.set(xlabel= 'Date', ylabel = 'Price [USD]')
 	ax.legend(labels)
