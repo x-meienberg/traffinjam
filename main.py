@@ -12,3 +12,4 @@ api1 = access_alpaca.api_1
 read_stocks.is_open(api2)
 
 read_stocks.read_market_data(api1)
+
