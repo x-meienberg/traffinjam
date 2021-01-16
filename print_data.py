@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np 
 
 
-def show_time_plot(data):
+def show_time_plot(data,name_of_stock):
 
 	t = []
 	y = []
@@ -64,6 +64,7 @@ def show_time_plot(data):
 	ax.legend(labels)
 
 	ax.grid()
-	plt.show()	
+	name_of_stock = str(name_of_stock)
+	fig.savefig(name_of_stock+'_stock')
 
 

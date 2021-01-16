@@ -16,10 +16,8 @@ days = 365
 
 for i in input_stocks:
 
-	aapl_bars = read_stocks.read_market_data(api1, i, days)
-	print_data.show_time_plot(aapl_bars)
-
-
+	stock_prices = read_stocks.read_market_data(api1, i, days)
+	print_data.show_time_plot(stock_prices, i)
 
 
 
