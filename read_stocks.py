@@ -7,7 +7,7 @@ import pandas as pd
 import alpaca_trade_api as tradeapi 
 import datetime
 
-
+days = 365
 
 def is_open(api):
 		
@@ -19,7 +19,7 @@ def is_open(api):
 ### Please check again here 
 def read_market_data(api):
 
-	barset = api.get_barset('AAPL','day', limit = 50)
+	barset = api.get_barset('AAPL','day', limit = days)
 	aapl_bars = barset['AAPL']
 
 	week_open = aapl_bars[0].o

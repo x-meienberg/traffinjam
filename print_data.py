@@ -11,6 +11,10 @@ def show_time_plot(data):
 	y = []
 	b = []
 	sma = []
+	t_momentum_up = []
+	t_momentum_down = []
+	y_momentum_up = []
+	y_momentum_down = []
 
 	horizon=len(data)
 
@@ -29,7 +33,23 @@ def show_time_plot(data):
 
 		sma.append(sma[j-1]+1/(j+1)*((y[j]+b[j])/2-sma[j-1]))
 
+	for i in range(horizon):
 
+		if (y[i]+b[i])/2> sma[i] and (y[i-3]+b[i-3])/2< sma[i-3]:
+
+			t_momentum_up.append(t[i])
+			y_momentum_up.append(sma[i])
+
+		elif (y[i]+b[i])/2 < sma[i] and (y[i-3]+b[i-3])/2 > sma[i-3]:
+
+			t_momentum_down.append(t[i])
+			y_momentum_down.append(sma[i])	
+
+
+	print("Momentum Down")
+	print(t_momentum_down)
+	print("Momentum Up")
+	print(t_momentum_up)				
 
 
 	fig, ax = plt.subplots()
@@ -37,8 +57,17 @@ def show_time_plot(data):
 	ax.plot(t,y)
 	ax.plot(t,b)
 	ax.plot(t,sma)
+	ax.scatter(t_momentum_up,y_momentum_up, marker="^", color="green")
+	ax.scatter(t_momentum_down,y_momentum_down, marker="v", color="red")
+	
+
+
+	labels = ["High","Low","SMA", "Momentum Up", "Momentum Down"]
 
 	ax.set(xlabel= 'Date', ylabel = 'Price [USD]')
+	ax.legend(labels)
 
 	ax.grid()
 	plt.show()	
+
+
