@@ -35,13 +35,13 @@ def show_time_plot(data,name_of_stock, days):
 		mean_price.append((low[i]+high[i])/2) #Calculate mean
 
 	#Calculate the first simple moving average
-	sma.append((high[0]+low[0])/2)	
+	sma.append(closing_price[0])	
 
 	
 	#Calculate the simple moving average
 	for j in range(1,horizon):
 
-		sma.append(sma[j-1]+1/(j+1)*((high[j]+low[j])/2-sma[j-1]))
+		sma.append(sma[j-1]+1/(j+1)*(closing_price[j]-sma[j-1]))
 
 
 	# Calculate exponential moving average
@@ -55,7 +55,7 @@ def show_time_plot(data,name_of_stock, days):
 	for j in range(1,horizon):
 
 		weightedCount.append((1-(1-alpha)**j)/(1-(1-alpha)))	
-		weigthedSum.append((high[j-1]+low[j-1])/2+(1-alpha)*weigthedSum[j-1])
+		weigthedSum.append(closing_price[j-1]+(1-alpha)*weigthedSum[j-1])
 		EMA.append(weigthedSum[j]/weightedCount[j])	
 			
 
@@ -64,7 +64,7 @@ def show_time_plot(data,name_of_stock, days):
 
 		if isMomentumUpDown == -1 or isMomentumUpDown == 0: 
 
-			if mean_price[i]> EMA[i] and mean_price[i] - mean_price[i-1] >= 0:
+			if closing_price[i]> EMA[i] and closing_price[i] - closing_price[i-1] >= 0:
 
 				t_momentum_up.append(t[i])
 				y_momentum_up.append(EMA[i])
@@ -72,7 +72,7 @@ def show_time_plot(data,name_of_stock, days):
 
 		elif isMomentumUpDown == 1 or isMomentumUpDown == 0:		
 
-			if mean_price[i] < EMA[i] and mean_price[i] - mean_price[i-1] <= 0 :
+			if closing_price[i] < EMA[i] and closing_price[i] - closing_price[i-1] <= 0 :
 
 				t_momentum_down.append(t[i])
 				y_momentum_down.append(EMA[i])	
@@ -82,7 +82,7 @@ def show_time_plot(data,name_of_stock, days):
 	#Define plots
 	fig, ax = plt.subplots()
 
-	ax.plot(t,mean_price)
+	ax.plot(t,closing_price)
 	ax.plot(t,sma)
 	ax.plot(t,EMA)
 	ax.scatter(t_momentum_up,y_momentum_up, marker="^", color="green")
@@ -90,7 +90,7 @@ def show_time_plot(data,name_of_stock, days):
 	
 
 
-	labels = ["Mean Stock Price","SMA","EMA", "Momentum Up", "Momentum Down"]
+	labels = ["Closing Stock Price","SMA","EMA", "Momentum Up", "Momentum Down"]
 
 	ax.set(xlabel= 'Date', ylabel = 'Price [USD]')
 	ax.legend(labels)

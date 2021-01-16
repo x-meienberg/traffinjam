@@ -10,7 +10,8 @@ api2 = access_alpaca.api_2
 api1 = access_alpaca.api_1
 
 input_stocks = ['AAPL','GOOG','FB','TSLA','ABB','NVS','DOW']
-days = 90
+intervals = 90 #Day Intervals
+
 
 
 # Check if stock market is open
@@ -19,8 +20,8 @@ days = 90
 # Check the data for all input_stocks
 for i in input_stocks:
 
-	stock_prices = read_stocks.read_market_data(api1, i, days)
-	print_data.show_time_plot(stock_prices, i, days)
+	stock_prices = read_stocks.read_market_data(api1, i, intervals)
+	print_data.show_time_plot(stock_prices, i, intervals)
 
 
 
