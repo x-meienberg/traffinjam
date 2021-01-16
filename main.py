@@ -9,7 +9,7 @@ import print_data
 api2 = access_alpaca.api_2
 api1 = access_alpaca.api_1
 
-input_stocks = ['AAPL','GOOG','FB','TSLA','ABB','NOVN','DOW']
+input_stocks = ['AAPL','GOOG','FB','TSLA','ABB','NVS','DOW']
 days = 90
 
 

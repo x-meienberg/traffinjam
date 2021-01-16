@@ -10,12 +10,16 @@ def show_time_plot(data,name_of_stock, days):
 	t = []
 	high = []
 	low = []
+	open_price = []
+	closing_price = []
 	mean_price = []
 	sma = []
+	volume = []
 	t_momentum_up = []
 	t_momentum_down = []
 	y_momentum_up = []
 	y_momentum_down = []
+	isMomentumUpDown = 0
 
 	#Define time horizon index
 	horizon=len(data)
@@ -25,6 +29,9 @@ def show_time_plot(data,name_of_stock, days):
 		t.append(data[i].t) #Define time
 		high.append(data[i].h) #Define highs
 		low.append(data[i].l) #Define lows
+		volume.append(data[i].v) #Define volume
+		closing_price.append(data[i].c) #Closing price
+		open_price.append(data[i].o) #Opening prices
 		mean_price.append((low[i]+high[i])/2) #Calculate mean
 
 	#Calculate the first simple moving average
@@ -36,18 +43,6 @@ def show_time_plot(data,name_of_stock, days):
 
 		sma.append(sma[j-1]+1/(j+1)*((high[j]+low[j])/2-sma[j-1]))
 
-	#Find momentum changes within data (historical data)
-	for i in range(3, horizon):
-
-		if (high[i]+low[i])/2> sma[i] and (high[i-3]+low[i-3])/2< sma[i]:
-
-			t_momentum_up.append(t[i])
-			y_momentum_up.append(sma[i]-1/100*sma[i])
-
-		elif (high[i]+low[i])/2 < sma[i] and (high[i-3]+low[i-3])/2 > sma[i]:
-
-			t_momentum_down.append(t[i])
-			y_momentum_down.append(sma[i]+1/100*sma[i])	
 
 	# Calculate exponential moving average
 	
@@ -64,11 +59,30 @@ def show_time_plot(data,name_of_stock, days):
 		EMA.append(weigthedSum[j]/weightedCount[j])	
 			
 
+	#Find momentum changes within data (historical data)
+	for i in range(3, horizon):
 
+		if isMomentumUpDown == -1 or isMomentumUpDown == 0: 
+
+			if mean_price[i]> EMA[i] and mean_price[i] - mean_price[i-1] >= 0:
+
+				t_momentum_up.append(t[i])
+				y_momentum_up.append(EMA[i])
+				isMomentumUpDown = 1
+
+		elif isMomentumUpDown == 1 or isMomentumUpDown == 0:		
+
+			if mean_price[i] < EMA[i] and mean_price[i] - mean_price[i-1] <= 0 :
+
+				t_momentum_down.append(t[i])
+				y_momentum_down.append(EMA[i])	
+				isMomentumUpDown = -1
+
+	
 	#Define plots
 	fig, ax = plt.subplots()
 
-	ax.plot(t, mean_price)
+	ax.plot(t,mean_price)
 	ax.plot(t,sma)
 	ax.plot(t,EMA)
 	ax.scatter(t_momentum_up,y_momentum_up, marker="^", color="green")
