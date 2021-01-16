@@ -42,12 +42,26 @@ def show_time_plot(data,name_of_stock, days):
 		if (high[i]+low[i])/2> sma[i] and (high[i-3]+low[i-3])/2< sma[i]:
 
 			t_momentum_up.append(t[i])
-			y_momentum_up.append(sma[i]-3/100*sma[i])
+			y_momentum_up.append(sma[i]-1/100*sma[i])
 
 		elif (high[i]+low[i])/2 < sma[i] and (high[i-3]+low[i-3])/2 > sma[i]:
 
 			t_momentum_down.append(t[i])
-			y_momentum_down.append(sma[i]+3/100*sma[i])	
+			y_momentum_down.append(sma[i]+1/100*sma[i])	
+
+	# Calculate exponential moving average
+	
+	alpha = 2/(horizon+1) #Define alpha value
+
+	weightedCount = [0]
+	weigthedSum = [0]
+	EMA = [(high[0]+low[0])/2]
+
+	for j in range(1,horizon):
+
+		weightedCount.append((1-(1-alpha)**j)/(1-(1-alpha)))	
+		weigthedSum.append((high[j-1]+low[j-1])/2+(1-alpha)*weigthedSum[j-1])
+		EMA.append(weigthedSum[j]/weightedCount[j])	
 			
 
 
@@ -56,12 +70,13 @@ def show_time_plot(data,name_of_stock, days):
 
 	ax.plot(t, mean_price)
 	ax.plot(t,sma)
+	ax.plot(t,EMA)
 	ax.scatter(t_momentum_up,y_momentum_up, marker="^", color="green")
 	ax.scatter(t_momentum_down,y_momentum_down, marker="v", color="red")
 	
 
 
-	labels = ["Mean Stock Price","SMA", "Momentum Up", "Momentum Down"]
+	labels = ["Mean Stock Price","SMA","EMA", "Momentum Up", "Momentum Down"]
 
 	ax.set(xlabel= 'Date', ylabel = 'Price [USD]')
 	ax.legend(labels)
@@ -72,5 +87,6 @@ def show_time_plot(data,name_of_stock, days):
 	ax.set_title('Historical Data of '+name_of_stock+' over last '+days+' days')
 	fig.autofmt_xdate()
 	fig.savefig('results/'+name_of_stock+'_stock.svg')
+
 
 

@@ -9,8 +9,8 @@ import print_data
 api2 = access_alpaca.api_2
 api1 = access_alpaca.api_1
 
-input_stocks = ['AAPL','GOOG','FB','TSLA','ABB','NOVN']
-days = 150
+input_stocks = ['AAPL','GOOG','FB','TSLA','ABB','NOVN','DOW']
+days = 90
 
 
 # Check if stock market is open
