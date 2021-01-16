@@ -8,18 +8,18 @@ import print_data
 api2 = access_alpaca.api_2
 api1 = access_alpaca.api_1
 
+input_stocks = ['AAPL','GOOG','FB']
+days = 365
 
 
 # read_stocks.is_open(api2)
 
-aapl_bars = read_stocks.read_market_data(api1)
+for i in input_stocks:
 
-#print(aapl_bars)
-
-# for i in range(len(aapl_bars)):
-
-	#print(aapl_bars[i].t)
+	aapl_bars = read_stocks.read_market_data(api1, i, days)
+	print_data.show_time_plot(aapl_bars)
 
 
-print_data.show_time_plot(aapl_bars)
+
+
 

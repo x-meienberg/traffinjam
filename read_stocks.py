@@ -7,7 +7,6 @@ import pandas as pd
 import alpaca_trade_api as tradeapi 
 import datetime
 
-days = 365
 
 def is_open(api):
 		
@@ -17,21 +16,23 @@ def is_open(api):
 
 
 ### Please check again here 
-def read_market_data(api):
-
-	barset = api.get_barset('AAPL','day', limit = days)
-	aapl_bars = barset['AAPL']
-
-	week_open = aapl_bars[0].o
-	week_close = aapl_bars[-1].c
+def read_market_data(api,input_stocks,days):
 
 
-	percent_change = (week_close-week_open)/week_open*100
+		barset = api.get_barset(input_stocks,'day', limit = days)
+		stock_bars = barset[input_stocks]
 
-	print('AAPL moved {}% over the last 5 days'.format(percent_change))
+		week_open = stock_bars[0].o
+		week_close = stock_bars[-1].c
 
-	# convert time in datetime
+
+		percent_change = (week_close-week_open)/week_open*100
+
+		# Print if how stocks have evolved over last couple of days
+		print(input_stocks,' moved {}% over the last 5 days'.format(percent_change))
+
+		# convert time in datetime
 	
 
-	return aapl_bars
+		return stock_bars
 
