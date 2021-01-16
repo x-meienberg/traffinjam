@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np 
 import pandas as pd 
 import alpaca_trade_api as tradeapi 
+import datetime
+
 
 
 def is_open(api):
@@ -17,8 +19,19 @@ def is_open(api):
 ### Please check again here 
 def read_market_data(api):
 
-	barset = api.get_barset('AAPL','day', limit = 5)
+	barset = api.get_barset('AAPL','day', limit = 50)
+	aapl_bars = barset['AAPL']
+
+	week_open = aapl_bars[0].o
+	week_close = aapl_bars[-1].c
 
 
+	percent_change = (week_close-week_open)/week_open*100
 
+	print('AAPL moved {}% over the last 5 days'.format(percent_change))
+
+	# convert time in datetime
+	
+
+	return aapl_bars
 
