@@ -8,7 +8,7 @@ import print_data
 api2 = access_alpaca.api_2
 api1 = access_alpaca.api_1
 
-input_stocks = ['AAPL','GOOG','FB']
+input_stocks = ['AAPL','GOOG','FB','TSLA','ABB','NOVN']
 days = 365
 
 
@@ -17,7 +17,7 @@ days = 365
 for i in input_stocks:
 
 	stock_prices = read_stocks.read_market_data(api1, i, days)
-	print_data.show_time_plot(stock_prices, i)
+	print_data.show_time_plot(stock_prices, i, days)
 
 
 

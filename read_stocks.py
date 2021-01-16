@@ -22,7 +22,7 @@ def read_market_data(api,input_stocks,days):
 		barset = api.get_barset(input_stocks,'day', limit = days)
 		stock_bars = barset[input_stocks]
 
-		week_open = stock_bars[0].o
+		week_open = stock_bars[days-5].o
 		week_close = stock_bars[-1].c
 
 
