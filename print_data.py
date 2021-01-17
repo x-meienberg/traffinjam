@@ -1,8 +1,5 @@
 
-import matplotlib
 import matplotlib.pyplot as plt 
-import pandas as pd 
-import numpy as np 
 
 
 def show_time_plot(data,name_of_stock, days,ma_interval):

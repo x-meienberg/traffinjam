@@ -1,13 +1,6 @@
 # read_stocks.py
 # Read the current data of the stock market and show them if need be
-
-import matplotlib.pyplot as plt 
-import numpy as np 
-import pandas as pd 
-import alpaca_trade_api as tradeapi 
-import datetime
-
-
+ 
 def is_open(api):
 		
 	#Check if market is closed
