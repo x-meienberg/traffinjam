@@ -24,3 +24,4 @@ for i in input_stocks:
         api1, i, intervals, ma_interval)
     print_data.show_time_plot(stock_prices, i, intervals, ma_interval)
 
+    
