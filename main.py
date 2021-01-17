@@ -23,5 +23,3 @@ for i in input_stocks:
     stock_prices = read_stocks.read_market_data(
         api1, i, intervals, ma_interval)
     print_data.show_time_plot(stock_prices, i, intervals, ma_interval)
-
-    
