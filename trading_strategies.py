@@ -65,7 +65,7 @@ def trading_strategy_1(data, name_of_stock, days, ma_interval):
 	ax.grid()
 	name_of_stock = str(name_of_stock)
 	days = str(days)
-	ax.set_title('Relative Returns of '+name_of_stock+ 'over last' + days + ' days')
+	ax.set_title('Relative Returns of '+name_of_stock+ ' over last ' + days + ' days')
 	fig.autofmt_xdate()
 	fig.savefig('results/' + name_of_stock + '_relativeReturn_stock.svg')
 
