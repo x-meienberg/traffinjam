@@ -16,7 +16,7 @@ def trading_strategy_1(data, name_of_stock, days, ma_interval):
 	volume = []
 	r_relative = []
 	r_log = []
-	c_cum = []
+	c_cumsum = []
 
 	#define time horizon of time series
 	horizon = len(data)
@@ -43,7 +43,7 @@ def trading_strategy_1(data, name_of_stock, days, ma_interval):
 
 		
 	#Define all relative, cumulative returns in percentages [%] 
-	c_rel_percentage = 100*(np.exp(c_cum)-1)
+	c_rel_percentage = 100*(np.exp(c_cumsum)-1)
 
 	#Redefine c_cum in percentages
 	c_cumsum_percentage = [element * 100 for element in c_cumsum]
