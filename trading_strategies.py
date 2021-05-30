@@ -35,18 +35,18 @@ def trading_strategy_1(data, name_of_stock, days, ma_interval):
 		r_log.append(np.log(mean_price[i-1]/mean_price[i])) #calculate the log-returns
 	
 	# Define cumulative sum c_cum of all log-returns in percentages [%]
-	c_cum.append(r_log[0])
+	c_cumsum.append(r_log[0])
 		
 	for i in range(1,horizon): 
 
-		c_cum.append(c_cum[i-1]+r_log[i])
+		c_cumsum.append(c_cumsum[i-1]+r_log[i])
 
 		
 	#Define all relative, cumulative returns in percentages [%] 
 	c_rel_percentage = 100*(np.exp(c_cum)-1)
 
 	#Redefine c_cum in percentages
-	c_cum_percentage = [element * 100 for element in c_cum]
+	c_cumsum_percentage = [element * 100 for element in c_cumsum]
 
 	#create plots
 	fig, ax = plt.subplots()
@@ -54,7 +54,7 @@ def trading_strategy_1(data, name_of_stock, days, ma_interval):
 	#plot each relevant time series
 	ax.plot(t[ma_interval:], r_relative[ma_interval:])
 	ax.plot(t[ma_interval:], r_log[ma_interval:])
-	ax.plot(t[ma_interval:], c_cum_percentage[ma_interval:])
+	ax.plot(t[ma_interval:], c_cumsum_percentage[ma_interval:])
 	ax.plot(t[ma_interval:], c_rel_percentage[ma_interval:])
 
 	labels = ["Relative Return", "Log-Returns", "Cumulative Log-Returns", "Cumulative Relative Returns"]
