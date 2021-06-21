@@ -45,3 +45,6 @@ Algotrading project for personal use and experiments
 2. [Alpha Research](https://medium.com/swlh/how-to-build-quant-algorithmic-trading-model-in-python-12abab49abe3)
 3. [Python for Algorithmic Trading](https://pyalgo.tpq.io/pyalgo_excerpt.pdf)
 4. [Dynamic Programming Algorithm](https://www.oxfordhandbooks.com/view/10.1093/oxfordhb/9780199844371.001.0001/oxfordhb-9780199844371-e-12)
+5. Testing, commit new md
+
+
